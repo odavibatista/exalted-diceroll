@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './rem.scss';
+@import './effects.scss';
 
 *   {
     margin: 0;
@@ -16,20 +17,117 @@ body    {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 150vh;
+    min-height: 150vh;
     gap: rem(100px);
 
     #card   {
         background-color: $bg-color;
         width: rem(500px);
-        height: rem(600px);
+        height: rem(700px);
+        gap: rem(30px);
         display: flex;
-        text-align: center;
+        flex-direction: column;
         justify-content: center;
+        text-align: center;
+        align-items: center;
         border-radius: rem(50px);
+
+        h4  {
+            font-family: $chivo;
+            font-size: rem(20px);
+        }
+
         img {
             height: rem(110px);
             margin-top: rem(20px);
+        }
+
+        h2  {
+            font-family: $chivo;
+            font-size: rem(20px);
+            margin: 0px 100px;
+        }
+
+        div{
+
+            display: flex;
+            align-items: center;
+            gap: rem(30px);
+
+            img {
+                animation: $rotation;
+                height: rem(120px);
+            }
+
+            #roll   {
+                width: rem(70px);
+                height: rem(40px);
+                background-color: $purple-1;
+                border-radius: rem(10px);
+                color: black;
+                font-size: rem(18px);
+                font-weight: bold;
+                border: $light-texts 2px solid;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.4s;
+                    background-color: #44003e;
+                    color: $lighter-texts;
+                    border: $lighter-texts 2px solid;
+                }
+    
+            }
+
+            #diceInput  {
+                width: rem(60px);
+                height: rem(40px);
+                border-radius: rem(10px);
+                background-color: $light-texts;
+                color: $lighter-texts;
+                font-weight: bold;
+                font-size: rem(22px);
+                text-align: center;
+                border: $purple-1 3px solid;
+            }
+
+
+        }
+
+        #results    {
+            width: rem(60px);
+            height: rem(30px);
+            background-color: #44003e;
+            border-radius: rem(10px);
+            justify-content: center;
+            color: aliceblue;
+            font-size: rem(20px);
+            font-family: $chivo;
+            font-weight: bolder;
+        }
+
+        #log    {
+            font-family: $chivo;
+            width: 80%;
+            background-color: rgba(255, 255, 255, 0.529);
+            height: 120px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            font-family: $chivo;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+
+            #log-text   {
+                font-family: $chivo;
+                width: 100px;
+                height: 100%;
+                padding: 25px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                
+            }
         }
     }
     #tip    {
@@ -54,7 +152,7 @@ body    {
             h6  {
                 font-style: italic;
                 font-size: rem(18px);
-                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                font-family: $roboto;
             }
         }
     }

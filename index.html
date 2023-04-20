@@ -7,16 +7,30 @@
     <title>Exalted - Dice-Rolling</title>
     <link rel="icon" type="image/x-icon" href="./src/images/exalted.png">
     <link rel="stylesheet" href="./assets/styles/css/style.css" class="src">
+    <script src="./assets/scripts/exalted.js" defer></script>
 </head>
 <body>
     <div id="card">
         <img src="/src/images/exalted-header.png" alt="exalted-dice-roller">
+        <h2>Abaixo, selecione quantos dados deseja rolar.</h2>
+        <div>
+            <img src="/src/images/d10.png" alt="">
+            <div>
+                <input type="number" id="diceInput" class="bold t-center" value="1" min="1" max="30">
+                <button id="roll" class="bold">Roll!</button>
+            </div>
+        </div>
+        <h4>Results</h4>
+        <div id="results"></div>
+        <div id="log">
+            <div id="log-text"></div>
+        </div>
     </div>
     <div id="tip">
-        <img src="/src/images/round-vigilius.png" alt="vigilius-melchiorre">
+        <img src="/src/images/round-vigilius.png" alt="vigilius-melchiorre" id="characterImg">
         <div>
-            <p>"[...]Sei muito bem que nem todos conseguiriam administrar e agir com boas mãos e cabeça para cuidar de tudo."</p>
-            <h6>"Aurelius" Vigilius Melchiorre</h6>
+            <p id="characterText">"Não creio que isto venha a ser o ideal..."</p>
+            <h6 id="characterName">"Aurelius" Vigilius Melchiorre</h6>
         </div>
     </div>
 </body>

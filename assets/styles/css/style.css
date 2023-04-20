@@ -1,3 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Chivo+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Chivo+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Chivo+Mono&display=swap");
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: $purple-1;
+  --c2: rgba(195, 0, 255, 0.1);
+}
+
+.box {
+  font-size: 3vw;
+  border: 0.35rem solid;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+  border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+  animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,21 +88,102 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 150vh;
+  min-height: 150vh;
   gap: 6.25rem;
 }
 body #card {
   background-color: rgba(255, 255, 255, 0.645);
   width: 31.25rem;
-  height: 37.5rem;
+  height: 43.75rem;
+  gap: 1.875rem;
   display: flex;
-  text-align: center;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   border-radius: 3.125rem;
+}
+body #card h4 {
+  font-family: Chivo Mono;
+  font-size: 1.25rem;
 }
 body #card img {
   height: 6.875rem;
   margin-top: 1.25rem;
+}
+body #card h2 {
+  font-family: Chivo Mono;
+  font-size: 1.25rem;
+  margin: 0px 100px;
+}
+body #card div {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+body #card div img {
+  animation: rotation 15s infinite linear;
+  height: 7.5rem;
+}
+body #card div #roll {
+  width: 4.375rem;
+  height: 2.5rem;
+  background-color: #7b0086;
+  border-radius: 0.625rem;
+  color: black;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border: #9a16ff 2px solid;
+}
+body #card div #roll:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #44003e;
+  color: rgb(248, 255, 255);
+  border: rgb(248, 255, 255) 2px solid;
+}
+body #card div #diceInput {
+  width: 3.75rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+  background-color: #9a16ff;
+  color: rgb(248, 255, 255);
+  font-weight: bold;
+  font-size: 1.375rem;
+  text-align: center;
+  border: #7b0086 3px solid;
+}
+body #card #results {
+  width: 3.75rem;
+  height: 1.875rem;
+  background-color: #44003e;
+  border-radius: 0.625rem;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 1.25rem;
+  font-family: Chivo Mono;
+  font-weight: bolder;
+}
+body #card #log {
+  font-family: Chivo Mono;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.529);
+  height: 120px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  font-family: Chivo Mono;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+body #card #log #log-text {
+  font-family: Chivo Mono;
+  width: 100px;
+  height: 100%;
+  padding: 25px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 body #tip {
   background-color: rgba(255, 255, 255, 0.645);
@@ -51,6 +207,78 @@ body #tip div h6 {
   font-style: italic;
   font-size: 1.125rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+:root {
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: $purple-1;
+  --c2: rgba(195, 0, 255, 0.1);
+}
+
+.box {
+  font-size: 3vw;
+  border: 0.35rem solid;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+  border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+  animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
