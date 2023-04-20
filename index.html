@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Exalted - Dice-Rolling</title>
     <link rel="icon" type="image/x-icon" href="./src/images/exalted.png">
     <link rel="stylesheet" href="./assets/styles/css/style.css" class="src">
@@ -16,7 +17,7 @@
         <div>
             <img src="/src/images/d10.png" alt="">
             <div>
-                <input type="number" id="diceInput" class="bold t-center" value="1" min="1" max="30">
+                <input type="number" id="diceInput" class="bold t-center" value="1" min="1" max="30" onKeyDown="return false">
                 <button id="roll" class="bold">Roll!</button>
             </div>
         </div>

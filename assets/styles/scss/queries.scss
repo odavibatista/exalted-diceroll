@@ -1,0 +1,62 @@
+@import './variables.scss';
+@import './elements.scss';
+@import './rem.scss';
+
+@media only screen and (max-width: 650px)   {
+    body{
+        gap: rem(30px);
+        #card{
+            transition: 0.8s;
+            width: rem(400px);
+            height: rem(600px);
+            gap: rem(10px);
+            border-radius: (20px);
+            
+            h2  {
+                font-size: rem(16px);
+                width: 80%;
+            }
+
+            h4  {
+                font-size: rem(16px);
+            }
+
+            div {
+                img {
+                    height: rem(80px);
+                    margin-top: rem(10px);
+                }
+            }
+
+        }
+        #tip{
+            transition: 0.8s;
+            width: rem(400px);
+            border-radius: (20px);
+        }
+    }
+
+}
+
+@media only screen and (max-width: 440px)   {
+    body{
+        gap: 30px;
+        #card   {
+            transition: 0.8s;
+            width: rem(320px);
+            height: rem(550px);
+            border-radius: rem(15px);
+            
+            img {
+                height: rem(60px);
+                margin-top: rem(10px);
+            }
+            
+        }
+        #tip    {
+            width: rem(320px);
+        }
+
+    }
+    
+}
