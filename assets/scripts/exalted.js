@@ -4,7 +4,7 @@ const log = document.getElementById('log')
 const results = document.getElementById('results')
 const diceInput = document.getElementById('diceInput')
 const resultsArr = []
-var dice = new Audio('../src/sfx/dice.mp3')
+var dice = new Audio('/exalted-diceroll/src/sfx/dice.mp3')
 
 function diceSound () {
   dice.play()
@@ -63,27 +63,27 @@ function randomChar() {
   const result = Math.floor(Math.random()*5 + 1)
   if(result === 1)  {
     characterText.innerText = '"Não creio que isto venha a ser o ideal..."'
-    characterImg.dataset.src = '/src/images/round-vigilius.png'
+    characterImg.dataset.src = '/exalted-diceroll/src/images/round-vigilius.png'
     characterName.innerText = '"Aurelius" Vigilius Melchiorre'
   }
   if(result === 2)  {
     characterText.innerText = '"Essa é uma PÉSSIMA ideia..."'
-    characterImg.src = '/src/images/round-nahr.png'
+    characterImg.src = '/exalted-diceroll/src/images/round-nahr.png'
     characterName.innerText = '"Nahr"'
   }
   if(result === 3)  {
     characterText.innerText = '"Você devia se soltar um pouco mais, rapaz!"'
-    characterImg.src = '/src/images/round-gustaff.png'
+    characterImg.src = '/exalted-diceroll/src/images/round-gustaff.png'
     characterName.innerText = 'Gustaff'
   }
   if(result === 4)  {
     characterText.innerText = '"A gente precisa se ajudar, pessoal!"'
-    characterImg.src = '/src/images/round-kiora.png'
+    characterImg.src = '/exalted-diceroll/src/images/round-kiora.png'
     characterName.innerText = 'Kiora Ashiok'
   }
   if(result === 5)  {
     characterText.innerText = '"Que tal relaxar um pouco, pessoal?"'
-    characterImg.src = '/src/images/round-florence.png'
+    characterImg.src = '/exalted-diceroll/src/images/round-florence.png'
     characterName.innerText = 'Florence'
   }
 }
