@@ -63,7 +63,7 @@ function randomChar() {
   const result = Math.floor(Math.random()*5 + 1)
   if(result === 1)  {
     characterText.innerText = '"Não creio que isto venha a ser o ideal..."'
-    characterImg.dataset.src = '/exalted-diceroll/src/images/round-vigilius.png'
+    characterImg.src = '/exalted-diceroll/src/images/round-vigilius.png'
     characterName.innerText = '"Aurelius" Vigilius Melchiorre'
   }
   if(result === 2)  {
