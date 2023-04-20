@@ -134,16 +134,17 @@ body #card div #roll {
   height: 2.5rem;
   background-color: #7b0086;
   border-radius: 0.625rem;
-  color: black;
+  color: rgb(248, 255, 255);
   font-size: 1.125rem;
   font-weight: bold;
+  font-family: Chivo Mono;
   border: #9a16ff 2px solid;
 }
 body #card div #roll:hover {
   cursor: pointer;
   transition: 0.4s;
   background-color: #44003e;
-  color: rgb(248, 255, 255);
+  color: black;
   border: rgb(248, 255, 255) 2px solid;
 }
 body #card div #diceInput {
@@ -412,16 +413,17 @@ body #card div #roll {
   height: 2.5rem;
   background-color: #7b0086;
   border-radius: 0.625rem;
-  color: black;
+  color: rgb(248, 255, 255);
   font-size: 1.125rem;
   font-weight: bold;
+  font-family: Chivo Mono;
   border: #9a16ff 2px solid;
 }
 body #card div #roll:hover {
   cursor: pointer;
   transition: 0.4s;
   background-color: #44003e;
-  color: rgb(248, 255, 255);
+  color: black;
   border: rgb(248, 255, 255) 2px solid;
 }
 body #card div #diceInput {
