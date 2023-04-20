@@ -1,0 +1,13 @@
+{
+  "name": "exalted-diceroll-v2.0",
+  "version": "2.0.0",
+  "description": "Exalted dice-rolling system, version 2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch assets/styles/scss/style.scss:assets/styles/css/style.css"
+  },
+  "keywords": [],
+  "author": "daviebatista",
+  "license": "ISC"
+}
